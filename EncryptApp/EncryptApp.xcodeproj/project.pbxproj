@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13F8C2901C849AE300673069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C28F1C849AE300673069 /* AppDelegate.swift */; };
+		13F8C2921C849AE300673069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C2911C849AE300673069 /* ViewController.swift */; };
+		13F8C2951C849AE300673069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F8C2931C849AE300673069 /* Main.storyboard */; };
+		13F8C2971C849AE300673069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F8C2961C849AE300673069 /* Assets.xcassets */; };
+		13F8C29A1C849AE300673069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F8C2981C849AE300673069 /* LaunchScreen.storyboard */; };
+		13F8C2A51C849AE400673069 /* EncryptAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C2A41C849AE400673069 /* EncryptAppTests.swift */; };
+		13F8C2B01C849AE400673069 /* EncryptAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C2AF1C849AE400673069 /* EncryptAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13F8C2A11C849AE400673069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13F8C2841C849AE300673069 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13F8C28B1C849AE300673069;
+			remoteInfo = EncryptApp;
+		};
+		13F8C2AC1C849AE400673069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13F8C2841C849AE300673069 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13F8C28B1C849AE300673069;
+			remoteInfo = EncryptApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13F8C28C1C849AE300673069 /* EncryptApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncryptApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F8C28F1C849AE300673069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13F8C2911C849AE300673069 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13F8C2941C849AE300673069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		13F8C2961C849AE300673069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13F8C2991C849AE300673069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		13F8C29B1C849AE300673069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F8C2A01C849AE400673069 /* EncryptAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncryptAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F8C2A41C849AE400673069 /* EncryptAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptAppTests.swift; sourceTree = "<group>"; };
+		13F8C2A61C849AE400673069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F8C2AB1C849AE400673069 /* EncryptAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncryptAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F8C2AF1C849AE400673069 /* EncryptAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptAppUITests.swift; sourceTree = "<group>"; };
+		13F8C2B11C849AE400673069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13F8C2891C849AE300673069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F8C29D1C849AE400673069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F8C2A81C849AE400673069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13F8C2831C849AE300673069 = {
+			isa = PBXGroup;
+			children = (
+				13F8C28E1C849AE300673069 /* EncryptApp */,
+				13F8C2A31C849AE400673069 /* EncryptAppTests */,
+				13F8C2AE1C849AE400673069 /* EncryptAppUITests */,
+				13F8C28D1C849AE300673069 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13F8C28D1C849AE300673069 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13F8C28C1C849AE300673069 /* EncryptApp.app */,
+				13F8C2A01C849AE400673069 /* EncryptAppTests.xctest */,
+				13F8C2AB1C849AE400673069 /* EncryptAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13F8C28E1C849AE300673069 /* EncryptApp */ = {
+			isa = PBXGroup;
+			children = (
+				13F8C28F1C849AE300673069 /* AppDelegate.swift */,
+				13F8C2911C849AE300673069 /* ViewController.swift */,
+				13F8C2931C849AE300673069 /* Main.storyboard */,
+				13F8C2961C849AE300673069 /* Assets.xcassets */,
+				13F8C2981C849AE300673069 /* LaunchScreen.storyboard */,
+				13F8C29B1C849AE300673069 /* Info.plist */,
+			);
+			path = EncryptApp;
+			sourceTree = "<group>";
+		};
+		13F8C2A31C849AE400673069 /* EncryptAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				13F8C2A41C849AE400673069 /* EncryptAppTests.swift */,
+				13F8C2A61C849AE400673069 /* Info.plist */,
+			);
+			path = EncryptAppTests;
+			sourceTree = "<group>";
+		};
+		13F8C2AE1C849AE400673069 /* EncryptAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				13F8C2AF1C849AE400673069 /* EncryptAppUITests.swift */,
+				13F8C2B11C849AE400673069 /* Info.plist */,
+			);
+			path = EncryptAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13F8C28B1C849AE300673069 /* EncryptApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13F8C2B41C849AE400673069 /* Build configuration list for PBXNativeTarget "EncryptApp" */;
+			buildPhases = (
+				13F8C2881C849AE300673069 /* Sources */,
+				13F8C2891C849AE300673069 /* Frameworks */,
+				13F8C28A1C849AE300673069 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EncryptApp;
+			productName = EncryptApp;
+			productReference = 13F8C28C1C849AE300673069 /* EncryptApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		13F8C29F1C849AE400673069 /* EncryptAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13F8C2B71C849AE400673069 /* Build configuration list for PBXNativeTarget "EncryptAppTests" */;
+			buildPhases = (
+				13F8C29C1C849AE400673069 /* Sources */,
+				13F8C29D1C849AE400673069 /* Frameworks */,
+				13F8C29E1C849AE400673069 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13F8C2A21C849AE400673069 /* PBXTargetDependency */,
+			);
+			name = EncryptAppTests;
+			productName = EncryptAppTests;
+			productReference = 13F8C2A01C849AE400673069 /* EncryptAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13F8C2AA1C849AE400673069 /* EncryptAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13F8C2BA1C849AE400673069 /* Build configuration list for PBXNativeTarget "EncryptAppUITests" */;
+			buildPhases = (
+				13F8C2A71C849AE400673069 /* Sources */,
+				13F8C2A81C849AE400673069 /* Frameworks */,
+				13F8C2A91C849AE400673069 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13F8C2AD1C849AE400673069 /* PBXTargetDependency */,
+			);
+			name = EncryptAppUITests;
+			productName = EncryptAppUITests;
+			productReference = 13F8C2AB1C849AE400673069 /* EncryptAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13F8C2841C849AE300673069 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Carlos Alcala";
+				TargetAttributes = {
+					13F8C28B1C849AE300673069 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					13F8C29F1C849AE400673069 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 13F8C28B1C849AE300673069;
+					};
+					13F8C2AA1C849AE400673069 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 13F8C28B1C849AE300673069;
+					};
+				};
+			};
+			buildConfigurationList = 13F8C2871C849AE300673069 /* Build configuration list for PBXProject "EncryptApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13F8C2831C849AE300673069;
+			productRefGroup = 13F8C28D1C849AE300673069 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13F8C28B1C849AE300673069 /* EncryptApp */,
+				13F8C29F1C849AE400673069 /* EncryptAppTests */,
+				13F8C2AA1C849AE400673069 /* EncryptAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13F8C28A1C849AE300673069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F8C29A1C849AE300673069 /* LaunchScreen.storyboard in Resources */,
+				13F8C2971C849AE300673069 /* Assets.xcassets in Resources */,
+				13F8C2951C849AE300673069 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F8C29E1C849AE400673069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F8C2A91C849AE400673069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13F8C2881C849AE300673069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F8C2921C849AE300673069 /* ViewController.swift in Sources */,
+				13F8C2901C849AE300673069 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F8C29C1C849AE400673069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F8C2A51C849AE400673069 /* EncryptAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F8C2A71C849AE400673069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F8C2B01C849AE400673069 /* EncryptAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13F8C2A21C849AE400673069 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13F8C28B1C849AE300673069 /* EncryptApp */;
+			targetProxy = 13F8C2A11C849AE400673069 /* PBXContainerItemProxy */;
+		};
+		13F8C2AD1C849AE400673069 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13F8C28B1C849AE300673069 /* EncryptApp */;
+			targetProxy = 13F8C2AC1C849AE400673069 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13F8C2931C849AE300673069 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13F8C2941C849AE300673069 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		13F8C2981C849AE300673069 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13F8C2991C849AE300673069 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13F8C2B21C849AE400673069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13F8C2B31C849AE400673069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13F8C2B51C849AE400673069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EncryptApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crowdvac.EncryptApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		13F8C2B61C849AE400673069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EncryptApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crowdvac.EncryptApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		13F8C2B81C849AE400673069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EncryptAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crowdvac.EncryptAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EncryptApp.app/EncryptApp";
+			};
+			name = Debug;
+		};
+		13F8C2B91C849AE400673069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EncryptAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crowdvac.EncryptAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EncryptApp.app/EncryptApp";
+			};
+			name = Release;
+		};
+		13F8C2BB1C849AE400673069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EncryptAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crowdvac.EncryptAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EncryptApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		13F8C2BC1C849AE400673069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EncryptAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crowdvac.EncryptAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EncryptApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13F8C2871C849AE300673069 /* Build configuration list for PBXProject "EncryptApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F8C2B21C849AE400673069 /* Debug */,
+				13F8C2B31C849AE400673069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13F8C2B41C849AE400673069 /* Build configuration list for PBXNativeTarget "EncryptApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F8C2B51C849AE400673069 /* Debug */,
+				13F8C2B61C849AE400673069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		13F8C2B71C849AE400673069 /* Build configuration list for PBXNativeTarget "EncryptAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F8C2B81C849AE400673069 /* Debug */,
+				13F8C2B91C849AE400673069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		13F8C2BA1C849AE400673069 /* Build configuration list for PBXNativeTarget "EncryptAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F8C2BB1C849AE400673069 /* Debug */,
+				13F8C2BC1C849AE400673069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13F8C2841C849AE300673069 /* Project object */;
+}
