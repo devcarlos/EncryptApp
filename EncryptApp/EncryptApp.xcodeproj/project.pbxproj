@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		138CE9C11C8651530047BBF5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138CE9C01C8651530047BBF5 /* NetworkManager.swift */; };
+		138CE9C51C8652140047BBF5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 138CE9C31C8652140047BBF5 /* Info.plist */; };
 		13F8C2901C849AE300673069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C28F1C849AE300673069 /* AppDelegate.swift */; };
 		13F8C2921C849AE300673069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C2911C849AE300673069 /* ViewController.swift */; };
 		13F8C2951C849AE300673069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F8C2931C849AE300673069 /* Main.storyboard */; };
@@ -14,6 +16,9 @@
 		13F8C29A1C849AE300673069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F8C2981C849AE300673069 /* LaunchScreen.storyboard */; };
 		13F8C2A51C849AE400673069 /* EncryptAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C2A41C849AE400673069 /* EncryptAppTests.swift */; };
 		13F8C2B01C849AE400673069 /* EncryptAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C2AF1C849AE400673069 /* EncryptAppUITests.swift */; };
+		13F8C2C11C84A4E300673069 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F8C2BE1C84A4E300673069 /* Alamofire.framework */; };
+		13F8C2C21C84A4E300673069 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F8C2BF1C84A4E300673069 /* MBProgressHUD.framework */; };
+		13F8C2C31C84A4E300673069 /* RNCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F8C2C01C84A4E300673069 /* RNCryptor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +39,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		138CE9C01C8651530047BBF5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Classes/Managers/NetworkManager/NetworkManager.swift; sourceTree = "<group>"; };
+		138CE9C31C8652140047BBF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Support/Info.plist; sourceTree = "<group>"; };
+		138CE9C41C8652140047BBF5 /* BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BridgeHeader.h; path = Support/BridgeHeader.h; sourceTree = "<group>"; };
 		13F8C28C1C849AE300673069 /* EncryptApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncryptApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F8C28F1C849AE300673069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13F8C2911C849AE300673069 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		13F8C2941C849AE300673069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13F8C2961C849AE300673069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13F8C2991C849AE300673069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		13F8C29B1C849AE300673069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13F8C2A01C849AE400673069 /* EncryptAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncryptAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F8C2A41C849AE400673069 /* EncryptAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptAppTests.swift; sourceTree = "<group>"; };
 		13F8C2A61C849AE400673069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13F8C2AB1C849AE400673069 /* EncryptAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncryptAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F8C2AF1C849AE400673069 /* EncryptAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptAppUITests.swift; sourceTree = "<group>"; };
 		13F8C2B11C849AE400673069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F8C2BE1C84A4E300673069 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		13F8C2BF1C84A4E300673069 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
+		13F8C2C01C84A4E300673069 /* RNCryptor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RNCryptor.framework; path = Carthage/Build/iOS/RNCryptor.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F8C2C11C84A4E300673069 /* Alamofire.framework in Frameworks */,
+				13F8C2C21C84A4E300673069 /* MBProgressHUD.framework in Frameworks */,
+				13F8C2C31C84A4E300673069 /* RNCryptor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +87,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		138CE9BF1C86504E0047BBF5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				138CE9C01C8651530047BBF5 /* NetworkManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		138CE9C21C8651F50047BBF5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				138CE9C31C8652140047BBF5 /* Info.plist */,
+				138CE9C41C8652140047BBF5 /* BridgeHeader.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		13F8C2831C849AE300673069 = {
 			isa = PBXGroup;
 			children = (
 				13F8C28E1C849AE300673069 /* EncryptApp */,
+				13F8C2C41C84A4F500673069 /* Frameworks */,
 				13F8C2A31C849AE400673069 /* EncryptAppTests */,
 				13F8C2AE1C849AE400673069 /* EncryptAppUITests */,
 				13F8C28D1C849AE300673069 /* Products */,
@@ -97,12 +128,12 @@
 		13F8C28E1C849AE300673069 /* EncryptApp */ = {
 			isa = PBXGroup;
 			children = (
-				13F8C28F1C849AE300673069 /* AppDelegate.swift */,
-				13F8C2911C849AE300673069 /* ViewController.swift */,
-				13F8C2931C849AE300673069 /* Main.storyboard */,
-				13F8C2961C849AE300673069 /* Assets.xcassets */,
-				13F8C2981C849AE300673069 /* LaunchScreen.storyboard */,
-				13F8C29B1C849AE300673069 /* Info.plist */,
+				138CE9BF1C86504E0047BBF5 /* Managers */,
+				13F8C2C61C84A51500673069 /* Assets */,
+				13F8C2C71C84A51C00673069 /* Main */,
+				13F8C2C51C84A50B00673069 /* Storyboards */,
+				13F8C2C81C84A52400673069 /* Controllers */,
+				138CE9C21C8651F50047BBF5 /* Supporting Files */,
 			);
 			path = EncryptApp;
 			sourceTree = "<group>";
@@ -125,6 +156,49 @@
 			path = EncryptAppUITests;
 			sourceTree = "<group>";
 		};
+		13F8C2C41C84A4F500673069 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F8C2BE1C84A4E300673069 /* Alamofire.framework */,
+				13F8C2BF1C84A4E300673069 /* MBProgressHUD.framework */,
+				13F8C2C01C84A4E300673069 /* RNCryptor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13F8C2C51C84A50B00673069 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				13F8C2931C849AE300673069 /* Main.storyboard */,
+				13F8C2981C849AE300673069 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		13F8C2C61C84A51500673069 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				13F8C2961C849AE300673069 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		13F8C2C71C84A51C00673069 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				13F8C28F1C849AE300673069 /* AppDelegate.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		13F8C2C81C84A52400673069 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				13F8C2911C849AE300673069 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +209,7 @@
 				13F8C2881C849AE300673069 /* Sources */,
 				13F8C2891C849AE300673069 /* Frameworks */,
 				13F8C28A1C849AE300673069 /* Resources */,
+				13F8C2BD1C84A1A200673069 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -229,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				138CE9C51C8652140047BBF5 /* Info.plist in Resources */,
 				13F8C29A1C849AE300673069 /* LaunchScreen.storyboard in Resources */,
 				13F8C2971C849AE300673069 /* Assets.xcassets in Resources */,
 				13F8C2951C849AE300673069 /* Main.storyboard in Resources */,
@@ -251,11 +327,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13F8C2BD1C84A1A200673069 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RNCryptor.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MBProgressHUD.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		13F8C2881C849AE300673069 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				138CE9C11C8651530047BBF5 /* NetworkManager.swift in Sources */,
 				13F8C2921C849AE300673069 /* ViewController.swift in Sources */,
 				13F8C2901C849AE300673069 /* AppDelegate.swift in Sources */,
 			);
@@ -397,10 +493,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EncryptApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crowdvac.EncryptApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = EncryptApp/Support/BridgeHeader.h;
 			};
 			name = Debug;
 		};
@@ -408,10 +509,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EncryptApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crowdvac.EncryptApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = EncryptApp/Support/BridgeHeader.h;
 			};
 			name = Release;
 		};
@@ -482,6 +588,7 @@
 				13F8C2B61C849AE400673069 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13F8C2B71C849AE400673069 /* Build configuration list for PBXNativeTarget "EncryptAppTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +597,7 @@
 				13F8C2B91C849AE400673069 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13F8C2BA1C849AE400673069 /* Build configuration list for PBXNativeTarget "EncryptAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +606,7 @@
 				13F8C2BC1C849AE400673069 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
