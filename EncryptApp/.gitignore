@@ -28,7 +28,6 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
-Carthage.pkg
-Cartfile.resolved
-Carthage/Build
-Carthage/Checkouts
+Podfile.lock
+Pods/
+

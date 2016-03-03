@@ -28,7 +28,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://176.9.192.221/mp4/5/Ariana%20Grande%20-%20Problem%20ft.%20Iggy%20Azalea.mp4" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-WW-Mjy" userLabel="URLField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-WW-Mjy" userLabel="URLField">
                                 <rect key="frame" x="16" y="64" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xds-8g-4bZ"/>

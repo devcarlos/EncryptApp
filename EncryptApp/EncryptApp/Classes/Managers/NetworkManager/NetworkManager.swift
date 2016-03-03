@@ -40,10 +40,18 @@ class NetworkManager: NSObject {
         let paths: NSArray = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         let filePath:String = paths.objectAtIndex(0).stringByAppendingPathComponent(filename)
         
+        NSLog("FILEURL: \(fileURL)")
+        NSLog("FILEPATH: \(filePath)")
+        
         operation.outputStream = NSOutputStream(toFileAtPath: filePath, append: false)
         
         operation.setDownloadProgressBlock({(bytesRead, totalBytesRead, totalBytesExpectedToRead) -> Void in
-            var total:CGFloat = CGFloat(totalBytesRead) / CGFloat(totalBytesExpectedToRead)
+            let total:CGFloat = CGFloat(totalBytesRead) / CGFloat(totalBytesExpectedToRead)
+
+//            NSLog("TOTAL BYTES READ: \(totalBytesRead)")
+//            NSLog("TOTAL BYTES EXP: \(totalBytesExpectedToRead)")
+//            NSLog("BYTES READ: \(bytesRead)")
+            
             progress(total: total)
         })
         
@@ -57,81 +65,21 @@ class NetworkManager: NSObject {
         operation.start()
     }
     
-//    func downloadFile(fileURL: String, type:DownloadFileType, saveToAlbum: Bool, completion: ((asset: PHAsset?, error: NSError?) -> Void)? = nil){
-//        if (saveToAlbum) {
-//            Utilities.checkPhotoAlbumPermissions({[unowned self](authorized: Bool)->Void in
-//                if authorized {
-//                    self.download(fileURL, type: type, saveToAlbum: saveToAlbum, completion: completion)
-//                }
-//                })
-//        } else {
-//            self.download(fileURL, type: type, saveToAlbum: saveToAlbum, completion: completion)
-//        }
-//    }
-//    
-//    func download(fileURL: String, type:DownloadFileType, saveToAlbum: Bool, completion: ((asset: PHAsset?, error: NSError?) -> Void)?) -> Void {
-//        
-//        //show progress HUD downloading
-//        MBProgressHUDCustom.showDeterminateWithStatus("DOWNLOADING")
-//        var filename = "filename." + type.rawValue
-//        //download video URL to local filePath
-//        Networking.sharedInstance.downloadFileWithProgress(fileURL, filename: filename,
-//            progress: {(total: CGFloat) -> Void in
-//                printlnDB("PROGRESS: \(total)")
-//                MBProgressHUDCustom.sharedView.progress = Float(total)
-//            },
-//            completion: {(filePath: String) -> Void in
-//                if (saveToAlbum) {
-//                    printlnDB("FILEPATH: \(filePath)")
-//                    
-//                    //save to album by type
-//                    if (type == DownloadFileType.Image) {
-//                        Utilities.savePhotoAlbumImage(filePath)
-//                    } else if (type == DownloadFileType.Video) {
-//                        if completion != nil {
-//                            Utilities.savePhotoAlbumVideo(filePath, completion:{ (asset, error) -> Void in
-//                                if error != nil {
-//                                    let message = "Media file cannot be saved."
-//                                    UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: "OK").show()
-//                                    MBProgressHUDCustom.dismiss()
-//                                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
-//                                        completion?(asset: asset, error: error)
-//                                    }
-//                                } else {
-//                                    //show completed HUD with animation (will dissmiss automatically)
-//                                    UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-//                                        MBProgressHUDCustom.showCompletedWithStatus("DOWNLOADED")
-//                                        }, completion: nil)
-//                                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(3.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
-//                                        completion?(asset: asset, error: error)
-//                                    }
-//                                    
-//                                }
-//                            })
-//                            return
-//                        } else {
-//                            Utilities.savePhotoAlbumVideo(filePath)
-//                        }
-//                    }
-//                }
-//                
-//                //show completed HUD with animation (will dissmiss automatically)
-//                UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-//                    MBProgressHUDCustom.showCompletedWithStatus("DOWNLOADED")
-//                    }, completion: nil)
-//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(3.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
-//                    completion?(asset: nil, error: nil)
-//                }
-//                
-//            },
-//            failure: {(error: NSError) -> Void in
-//                let message = "Media file cannot be downloaded."
-//                UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: "OK").show()
-//                MBProgressHUDCustom.dismiss()
-//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
-//                    completion?(asset: nil, error: error)
-//                }
-//        })
-//    }
+    
+    func saveFile(data: NSData, filename: String, completion: (filePath: String) -> Void, failure: (error: NSError) -> Void){
+        if let dir : NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
+            let filepath = dir.stringByAppendingPathComponent(filename);
+            
+            //write data to file
+            do {
+                try data.writeToFile(filepath, options: NSDataWritingOptions.DataWritingAtomic)
+                completion(filePath: filepath)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+                failure(error: error)
+            }
+        }
+        
+    }
     
 }//end
