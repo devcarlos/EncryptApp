@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIDocumentInteractionControllerDelegate {
     
     //IBOutlets
     @IBOutlet weak var URLField: UITextField!
@@ -18,12 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var decryptProgress: UILabel!
     
     // Properties
-    
     var fileURL: String?
-    
-    var cipherPath: String?
-    
-    let password = "123456789Password"
+    var encryptedFilePath: String?
+    var decryptedFilePath: String?
     
     // MARK: Base Functions
     override func viewDidLoad() {
@@ -39,8 +36,8 @@ class ViewController: UIViewController {
     
     // MARK: Actions
     
-    @IBAction func downloadPressed(sender: AnyObject) {
-        
+    @IBAction func encryptFinalPressed(sender: AnyObject) {
+        //Downloaded File Encryption Example
         if let url = self.URLField.text where url != "" {
             self.fileURL = url
             
@@ -48,113 +45,102 @@ class ViewController: UIViewController {
             loadingNotification.mode = MBProgressHUDMode.Determinate
             loadingNotification.labelText = "Downloading"
             
-            NetworkManager.sharedInstance.downloadFileWithProgress(self.fileURL!,
-                filename: "original.mp4",
+            EncryptorManager.sharedInstance.downloadWithFinalEncryption(self.fileURL!,
+                filename: "EncryptedFinal.file",
                 progress: {(total: CGFloat) -> Void in
                     NSLog("PROGRESS: \(total)")
                     loadingNotification.progress = Float(total)
+                    let totalPercent = trunc(Float(total) * 100)
+                    loadingNotification.detailsLabelText = "\(totalPercent)%"
                 },
                 completion: {(filePath: String) -> Void in
                     MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-                    NSLog("COMPLETION: \(filePath)")
+                    NSLog("ENCRYPTED FILEPATH: \(filePath)")
+                    self.encryptedFilePath = filePath
                 },
                 failure: {(error: NSError) -> Void in
                     MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-                    let message = "file cannot be downloaded."
+                    let message = "File cannot be downloaded and encrypted: Error: \(error.localizedDescription)."
                     NSLog("COMPLETION: \(message)")
                     let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:nil));
                     
                     self.presentViewController(alert, animated: false, completion: nil)
-                })
+            })
         }
     }
     
-    @IBAction func encryptPressed(sender: AnyObject) {
-        //Encryption Example
-        self.encryptExample()
+    @IBAction func encryptStreamPressed(sender: AnyObject) {
+        //Stream Encryption Example
+        if let url = self.URLField.text where url != "" {
+            self.fileURL = url
+            
+            let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            loadingNotification.mode = MBProgressHUDMode.AnnularDeterminate
+            loadingNotification.labelText = "Downloading"
+            
+            EncryptorManager.sharedInstance.downloadWithStreamEncryption(self.fileURL!,
+                filename: "OriginalFileStream",
+                progress: {(total: CGFloat) -> Void in
+                    NSLog("PROGRESS: \(total)")
+                    loadingNotification.progress = Float(total)
+                    let totalPercent = trunc(Float(total) * 100)
+                    loadingNotification.detailsLabelText = "\(totalPercent)%"
+                },
+                completion: {(filePath: String) -> Void in
+                    MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                    NSLog("ENCRYPTED FILEPATH: \(filePath)")
+                    self.encryptedFilePath = filePath
+                },
+                failure: {(error: NSError) -> Void in
+                    MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                    let message = "File cannot be downloaded and encrypted: Error: \(error.localizedDescription)."
+                    NSLog("COMPLETION: \(message)")
+                    let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:nil));
+                    
+                    self.presentViewController(alert, animated: false, completion: nil)
+            })
+        }
     }
     
     @IBAction func decryptPressed(sender: AnyObject) {
         //Decryption Example
-        self.decryptExample()
+        
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.Determinate
+        loadingNotification.labelText = "Decrypting"
+        
+        EncryptorManager.sharedInstance.decrypt(self.encryptedFilePath!,
+            filename: "DecryptedFile",
+            completion: {(filePath: String) -> Void in
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                NSLog("DECRYPTED FILEPATH: \(filePath)")
+                self.decryptedFilePath = filePath
+            },
+            failure: {(error: NSError) -> Void in
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                let message = "file cannot be decrypted: \(error.localizedDescription)."
+                NSLog("Error: \(message)")
+                let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:nil));
+                
+                self.presentViewController(alert, animated: false, completion: nil)
+        })
+        
     }
     
-    @IBAction func testNormalPressed(sender: AnyObject) {
-    }
-    
+    // MARK: test function
     
     @IBAction func testDecryptPressed(sender: AnyObject) {
-    }
-    
-    // MARK: encryption/decryption example functions
-    
-    func encryptExample() {
         
-        // ENCRYPTION FILE
-        if let path = NSBundle.mainBundle().pathForResource("example", ofType: "txt") {
-            do {
-                let data = try NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
-                
-                let text = String(data: data, encoding: NSUTF8StringEncoding)
-                let cipherdata:NSData = RNCryptor.encryptData(data, password: self.password)
-                print("CIPHER DATA1: \(cipherdata)")
-                
-                
-                //SAVE ENCRYPTED FILE
-                NetworkManager.sharedInstance.saveFile(cipherdata,
-                    filename: "EncryptedFile",
-                    completion: {(filePath: String) -> Void in
-                        NSLog("ENCRYPTED FILEPATH: \(filePath)")
-                        self.cipherPath = filePath
-                        
-                        
-                        print("TEXT: \(text!)")
-                        print("ENCRYPTED: \(cipherdata)")
-                        
-                        // DECRYPTION
-                        do {
-                            print("ENCRYPTED PATH: \(self.cipherPath!)")
-                            let cipherdata2 = try NSData(contentsOfFile: self.cipherPath!, options: .DataReadingMappedIfSafe)
-                            print("CIPHER DATA2: \(cipherdata2)")
-                            let originalData = try RNCryptor.decryptData(cipherdata2, password: self.password)
-                            let originaltext = String(data: originalData, encoding: NSUTF8StringEncoding)
-                            print("DECRYPTED: \(originalData)")
-                            print("ORIGINAL TEXT: \(originaltext!)")
-                        } catch {
-                            print(error)
-                        }
-                        
-                    },
-                    failure: {(error: NSError) -> Void in
-                        let message = error.localizedDescription
-                        NSLog("ERROR: \(message)")
-                        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:nil));
-                        
-                        self.presentViewController(alert, animated: false, completion: nil)
-                })
-
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        }
-    }
-    
-    func decryptExample() {
+        //NOTE: OLNY FOR  TESTING 
+        //try to open with a document interaction
         
-        // DECRYPTION
-        do {
-            print("ENCRYPTED PATH: \(self.cipherPath!)")
-            let cipherdata2 = try NSData(contentsOfFile: self.cipherPath!, options: .DataReadingMappedIfSafe)
-            print("CIPHER DATA2: \(cipherdata2)")
-            let originalData = try RNCryptor.decryptData(cipherdata2, password: self.password)
-            let originaltext = String(data: originalData, encoding: NSUTF8StringEncoding)
-            print("DECRYPTED: \(originalData)")
-            print("ORIGINAL TEXT: \(originaltext!)")
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
+        let decryptedURL = NSURL(fileURLWithPath:self.decryptedFilePath!)
+        let doc = UIDocumentInteractionController(URL: decryptedURL)
+        doc.delegate = self
+        doc .presentOpenInMenuFromRect(CGRect.zero, inView: self.view, animated: true)
     }
 }
 

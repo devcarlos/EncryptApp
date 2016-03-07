@@ -7,5 +7,6 @@
 //
 
 #import <AFNetworking/AFNetworking.h>
+#import "DWHTTPStreamSessionManager.h"
 #import "MBProgressHUD.h"
 #import "RNCryptor.h"

@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		137A85201C87EBEE00332EF5 /* RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137A851F1C87EBEE00332EF5 /* RNCryptor.swift */; };
 		137A85221C87EDF200332EF5 /* example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 137A85211C87EDF200332EF5 /* example.txt */; };
-		138CE9C11C8651530047BBF5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138CE9C01C8651530047BBF5 /* NetworkManager.swift */; };
-		138CE9C51C8652140047BBF5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 138CE9C31C8652140047BBF5 /* Info.plist */; };
+		138CE9C11C8651530047BBF5 /* EncryptorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138CE9C01C8651530047BBF5 /* EncryptorManager.swift */; };
 		13F8C2901C849AE300673069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C28F1C849AE300673069 /* AppDelegate.swift */; };
 		13F8C2921C849AE300673069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C2911C849AE300673069 /* ViewController.swift */; };
 		13F8C2951C849AE300673069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F8C2931C849AE300673069 /* Main.storyboard */; };
@@ -42,7 +41,7 @@
 		137A851E1C87EBEE00332EF5 /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
 		137A851F1C87EBEE00332EF5 /* RNCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptor.swift; sourceTree = "<group>"; };
 		137A85211C87EDF200332EF5 /* example.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = example.txt; path = Assets/example.txt; sourceTree = "<group>"; };
-		138CE9C01C8651530047BBF5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Classes/Managers/NetworkManager/NetworkManager.swift; sourceTree = "<group>"; };
+		138CE9C01C8651530047BBF5 /* EncryptorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EncryptorManager.swift; path = Classes/Managers/NetworkManager/EncryptorManager.swift; sourceTree = "<group>"; };
 		138CE9C31C8652140047BBF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Support/Info.plist; sourceTree = "<group>"; };
 		138CE9C41C8652140047BBF5 /* BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BridgeHeader.h; path = Support/BridgeHeader.h; sourceTree = "<group>"; };
 		13F8C28C1C849AE300673069 /* EncryptApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncryptApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +107,7 @@
 		138CE9BF1C86504E0047BBF5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				138CE9C01C8651530047BBF5 /* NetworkManager.swift */,
+				138CE9C01C8651530047BBF5 /* EncryptorManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -334,7 +333,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				138CE9C51C8652140047BBF5 /* Info.plist in Resources */,
 				13F8C29A1C849AE300673069 /* LaunchScreen.storyboard in Resources */,
 				137A85221C87EDF200332EF5 /* example.txt in Resources */,
 				13F8C2971C849AE300673069 /* Assets.xcassets in Resources */,
@@ -411,7 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				138CE9C11C8651530047BBF5 /* NetworkManager.swift in Sources */,
+				138CE9C11C8651530047BBF5 /* EncryptorManager.swift in Sources */,
 				137A85201C87EBEE00332EF5 /* RNCryptor.swift in Sources */,
 				13F8C2921C849AE300673069 /* ViewController.swift in Sources */,
 				13F8C2901C849AE300673069 /* AppDelegate.swift in Sources */,
@@ -555,10 +553,7 @@
 			baseConfigurationReference = 63CA6272B65E92F87C030ADB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = EncryptApp/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crowdvac.EncryptApp;
@@ -572,10 +567,7 @@
 			baseConfigurationReference = 6C134C03D7B738C856983EDB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = EncryptApp/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crowdvac.EncryptApp;
